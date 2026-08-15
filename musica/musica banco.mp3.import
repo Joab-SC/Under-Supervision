@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica banco.mp3-acecc6cd08b36a68150e3aedcb8a4af1.mp3str"
+
+[deps]
+
+source_file="res://musica/musica banco.mp3"
+dest_files=[ "res://.import/musica banco.mp3-acecc6cd08b36a68150e3aedcb8a4af1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

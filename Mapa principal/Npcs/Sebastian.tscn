@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Museo/Npcs/Sprites mismo tipo/chico 5.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 9.05539
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "izquierda_abajo"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1.2, 1.6, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 7, 0, 1 ]
+}
+
+[node name="Sebastian" type="StaticBody2D"]
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -12.5724 )
+texture = ExtResource( 1 )
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.427605 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "izquierda_abajo"
+anims/RESET = SubResource( 2 )
+anims/izquierda_abajo = SubResource( 3 )

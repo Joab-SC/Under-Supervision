@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/679428_UnderTale-Ruins.mp3-88098b7b1ce1964eb1b94c54af178eed.mp3str"
+
+[deps]
+
+source_file="res://musica/679428_UnderTale-Ruins.mp3"
+dest_files=[ "res://.import/679428_UnderTale-Ruins.mp3-88098b7b1ce1964eb1b94c54af178eed.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

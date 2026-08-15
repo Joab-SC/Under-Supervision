@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/musica biblioteca.mp3-bca4359409d494872f03cf296cdac7ef.mp3str"
+
+[deps]
+
+source_file="res://musica/musica biblioteca.mp3"
+dest_files=[ "res://.import/musica biblioteca.mp3-bca4359409d494872f03cf296cdac7ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

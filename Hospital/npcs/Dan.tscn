@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Hospital/Old/16x16/Dan_reading_16x16.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 5.09902
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("dan:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "leer"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("dan:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8, 1, 1.3, 1.6, 1.9, 2.2, 2.4, 2.6, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 2, 4, 5, 8, 10, 12, 13, 14, 15, 16, 17 ]
+}
+
+[node name="Dan" type="StaticBody2D"]
+
+[node name="dan" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 9 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "leer"
+anims/RESET = SubResource( 2 )
+anims/leer = SubResource( 3 )

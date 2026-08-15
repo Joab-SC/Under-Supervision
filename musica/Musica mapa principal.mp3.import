@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Musica mapa principal.mp3-f6adf0c4ca0e5ac7fa101affa97bbffa.mp3str"
+
+[deps]
+
+source_file="res://musica/Musica mapa principal.mp3"
+dest_files=[ "res://.import/Musica mapa principal.mp3-f6adf0c4ca0e5ac7fa101affa97bbffa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

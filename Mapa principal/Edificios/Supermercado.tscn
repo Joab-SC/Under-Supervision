@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Mapa principal/Imagenes elementos mapa principal/Imagenes edificios y objetos/City objects.png" type="Texture" id=1]
+
+[node name="Shop c" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 3, -23 )
+texture = ExtResource( 1 )
+hframes = 10
+vframes = 8
+frame = 10
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -32, 3, -26, 9, 26, 9, 32, 3, 32, -10, 0, -10, -32, -10 )

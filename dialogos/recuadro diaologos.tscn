@@ -1,0 +1,273 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://dialogos/Minecraftia-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://dialogos/dialogue_box.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "SET_TEXTO"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TEXTO:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "PONER_A"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoA:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoA:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "PONER_B"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoB:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoB:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "PONER_C"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoC:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoC:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "PONER_D"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoD:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../textoD:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[node name="recuadro dialogos" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = 228.0
+margin_top = 13.0
+margin_right = 599.0
+margin_bottom = 152.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 0.612953, 1.12894, 30.7429, 30.5813 )
+patch_margin_left = 3
+patch_margin_right = 3
+patch_margin_bottom = 1
+
+[node name="Button" type="Button" parent="."]
+margin_left = 555.0
+margin_top = 90.0
+margin_right = 589.0
+margin_bottom = 110.0
+
+[node name="OpcionA" type="Button" parent="."]
+visible = false
+margin_left = 239.0
+margin_top = 125.0
+margin_right = 314.0
+margin_bottom = 145.0
+
+[node name="OpcionB" type="Button" parent="."]
+visible = false
+margin_left = 327.0
+margin_top = 125.0
+margin_right = 402.0
+margin_bottom = 145.0
+
+[node name="OpcionC" type="Button" parent="."]
+visible = false
+margin_left = 415.0
+margin_top = 125.0
+margin_right = 490.0
+margin_bottom = 145.0
+
+[node name="OpcionD" type="Button" parent="."]
+visible = false
+margin_left = 503.0
+margin_top = 125.0
+margin_right = 580.0
+margin_bottom = 140.0
+
+[node name="TEXTO" type="Label" parent="."]
+margin_left = 239.0
+margin_top = 25.0
+margin_right = 587.0
+margin_bottom = 93.0
+custom_fonts/font = SubResource( 1 )
+autowrap = true
+
+[node name="textoA" type="Label" parent="."]
+margin_left = 241.0
+margin_top = 130.0
+margin_right = 313.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 1 )
+text = "hola"
+align = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="textoB" type="Label" parent="."]
+margin_left = 329.0
+margin_top = 130.0
+margin_right = 401.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="textoC" type="Label" parent="."]
+margin_left = 417.0
+margin_top = 130.0
+margin_right = 489.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="textoD" type="Label" parent="."]
+margin_left = 505.0
+margin_top = 130.0
+margin_right = 579.0
+margin_bottom = 141.0
+custom_fonts/font = SubResource( 1 )
+align = 1
+autowrap = true
+percent_visible = 0.0
+
+[node name="ANIM" type="AnimationPlayer" parent="."]
+root_node = NodePath("../NinePatchRect")
+playback_speed = 0.6
+anims/SET_TEXTO = SubResource( 3 )
+
+[node name="ANIM_A" type="AnimationPlayer" parent="."]
+root_node = NodePath("../NinePatchRect")
+playback_speed = 0.6
+anims/PONER_A = SubResource( 4 )
+anims/RESET = SubResource( 5 )
+
+[node name="ANIM_B" type="AnimationPlayer" parent="."]
+root_node = NodePath("../NinePatchRect")
+playback_speed = 0.6
+anims/PONER_B = SubResource( 9 )
+anims/RESET = SubResource( 10 )
+
+[node name="ANIM_C" type="AnimationPlayer" parent="."]
+root_node = NodePath("../NinePatchRect")
+playback_speed = 0.6
+anims/PONER_C = SubResource( 11 )
+anims/RESET = SubResource( 12 )
+
+[node name="ANIM_D" type="AnimationPlayer" parent="."]
+root_node = NodePath("../NinePatchRect")
+playback_speed = 0.6
+anims/PONER_D = SubResource( 13 )
+anims/RESET = SubResource( 14 )

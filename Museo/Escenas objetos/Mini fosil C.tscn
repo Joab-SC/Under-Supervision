@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Museo/Imagenes objetos/Mini fosiles.png" type="Texture" id=1]
+
+[node name="Mini fosil C" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.7, 0 )
+texture = ExtResource( 1 )
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -1.7, -1 )
+polygon = PoolVector2Array( -9, 8, -9, 0, -2.3, 0, 5.7, 0, 11.7, 0, 12, 1, 12, 3, 9, 9, 7, 9, 7, 8, 6, 8, 6, 9, 3, 9, 3, 10, -2, 10, -2, 9, -7, 9 )

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Museo/Npcs/Sprites mismo tipo/chica 4.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 9.0
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Luisa:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "frente"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Luisa:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 1.2, 1.6, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 0, 3 ]
+}
+
+[node name="Luisa" type="StaticBody2D"]
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Luisa" type="Sprite" parent="."]
+position = Vector2( 0, -13 )
+texture = ExtResource( 1 )
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "frente"
+playback_speed = 0.8
+anims/RESET = SubResource( 2 )
+anims/frente = SubResource( 3 )
